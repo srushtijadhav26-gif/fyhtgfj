@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 80px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span {
+    color: #123c88;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.logo small {
+    font-size: 9px;
+    color: #555;
+    max-width: 230px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #172033;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 30, 75, 0.95),
+            rgba(8, 30, 75, 0.65),
+            rgba(8, 30, 75, 0.2)
+        ),
+        url("images/college.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 25px;
+    color: white;
+}
+
+.welcome {
+    color: #ffcf33;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ffcf33;
+}
+
+.hero-content > p:not(.welcome) {
+    max-width: 600px;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #e63946;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #c92735;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border-color: white;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #123c88;
+}
+
+.white-btn {
+    background: white;
+    color: #123c88;
+}
+
+.white-btn:hover {
+    background: #ffcf33;
+}
+
+
+/* GENERAL SECTION */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.light-section {
+    max-width: none;
+    background: #f5f7fb;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading p {
+    color: #e63946;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+
+/* ABOUT */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    height: 400px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(135deg, #123c88, #2667c9);
+
+    color: white;
+    font-size: 70px;
+    font-weight: 900;
+
+    border-radius: 12px;
+}
+
+.about-content h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #626b7c;
+    margin-bottom: 18px;
+}
+
+
+/* STATS */
+
+.stats {
+    background: #123c88;
+    color: white;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+    padding: 55px 25px;
+}
+
+.stat h2 {
+    color: #ffcf33;
+    font-size: 42px;
+}
+
+.stat p {
+    font-size: 15px;
+}
+
+
+/* COURSE CARDS */
+
+.cards {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #687386;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #e63946;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* DEPARTMENTS */
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.department {
+    padding: 30px;
+    border-left: 4px solid #123c88;
+    background: #f5f7fb;
+    transition: 0.3s;
+}
+
+.department:hover {
+    background: #123c88;
+    color: white;
+}
+
+.department span {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.department h3 {
+    margin: 10px 0 5px;
+}
+
+
+/* ADMISSIONS */
+
+.admission-section {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18,60,136,0.96),
+            rgba(18,60,136,0.75)
+        ),
+        url("images/campus.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 100px 25px;
+}
+
+.admission-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.admission-content > p:first-child {
+    color: #ffcf33;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.admission-content h2 {
+    font-size: 45px;
+    margin: 10px 0 20px;
+}
+
+.admission-content > p {
+    margin-bottom: 30px;
+}
+
+
+/* CONTACT */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #687386;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item strong {
+    color: #123c88;
+}
+
+.contact-item p {
+    color: #687386;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #d8dce5;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #123c88;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #101a2c;
+    color: white;
+    padding-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px 50px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-content h2 {
+    color: #ffcf33;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content a {
+    display: block;
+    color: #c7cedb;
+    text-decoration: none;
+    margin-bottom: 7px;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    padding: 20px;
+    color: #aeb7c6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+        gap: 0;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px 25px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cards,
+    .department-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .cards,
+    .department-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    .admission-content h2 {
+        font-size: 32px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
